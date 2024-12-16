@@ -20,9 +20,11 @@ def numOfDays(date1, date2):
     else:
         return (date1-date2).days
 def reat():
-    return open('data.txt','r').read()
+    pass
+    #return open('data.txt','r').read()
 def rite(text):
-    open('data.txt', 'w').write(text)
+    pass
+    #open('data.txt', 'w').write(text)
 
 def sendmsg(text):
     token = '6927669748:AAG_MR1hu94BVNr7qlVLJiFCmiUz4QuUaTc'
@@ -38,21 +40,19 @@ def main():
         print("...")
     else:
         a = False
-        last = reat().splitlines()[1].split("?")
-        daay = int(last[2])
-        moonth = int(last[1])
-        yeaar = int(last[0])
+        #last = reat().splitlines()[1].split("?")
+        daay = 16
+        moonth = 12
+        yeaar = 2024
         print(last)
         last_nut = [date(yeaar, moonth, daay), str(yeaar)+"?"+str(moonth)+"?"+str(daay)]
         
     the_between = numOfDays(last_nut[0], Today()[0])
     daytext = f"{the_between}"
-    if daytext == reat():
-        pass
     else:
         msg = [f'keep it up {daytext} days 💪🏿!', f"يا بطل يا بطل استمرر {daytext} يوم 😍"]
         msg = random.choice(msg) 
-        rite(daytext+"+\n"+last_nut[1])
+        #rite(daytext+"+\n"+last_nut[1])
         sendmsg(msg)
         
         
